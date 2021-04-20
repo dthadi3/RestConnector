@@ -3,3 +3,11 @@ arch:
   - amd64
   - ppc64le
 os: linux
+node_js:
+  - node
+  - lts/*
+install:
+  - npm install
+  - node googleAnalytics.js
+  - npm install validator
+  - npm install concatenate-files
