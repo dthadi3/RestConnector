@@ -4,11 +4,23 @@ arch:
   - ppc64le
 os: linux
 node_js:
-  - node
-  - lts/*
+#  - node
+#  - lts/*
+  - 0.10
+  - 0.12
+  - 4
+  - 6
+  - 8
+  - 10
 install:
   - cd GA
   - npm install
   - node googleAnalytics.js
   - npm install validator
   - npm install concatenate-files
+jobs:
+  exclude:
+    - node_js: "0.10"
+      arch: ppc64le
+    - node_js: "0.12"
+      arch: ppc64le
