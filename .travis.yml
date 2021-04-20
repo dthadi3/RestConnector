@@ -7,6 +7,7 @@ node_js:
   - node
   - lts/*
 install:
+  - cd GA
   - npm install
   - node googleAnalytics.js
   - npm install validator
